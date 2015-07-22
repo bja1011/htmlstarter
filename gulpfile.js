@@ -83,11 +83,6 @@ gulp.task('minifycss',function(){
 	.pipe(gulp.dest('dist/assets/css'))
 })
 
-gulp.task('watchIndex',function(){
-	livereload.listen();
-	gulp.watch(['src/js/*.js'],['lint','scripts']);
-})
-
 gulp.task('watch',function(){
 	livereload.listen();
 	gulp.watch(['src/less/*.less'],['less']);
@@ -97,6 +92,6 @@ gulp.task('watch',function(){
 
 //gulp.task('default', ['index','justCopy', 'less','copyCSS','scripts','watch']);
 gulp.task('default', function(){
-	//runSequence('index','copyBootstrap','copyFonts','copyImages' ,'less','copyCSS','scripts','watch','watchIndex');
-	runSequence('index','less','copyCSS','scripts','watch');
+	runSequence('clean:dist','index','copyBootstrap','copyFonts','copyImages' ,'less','copyCSS','scripts','watch');
+	//runSequence('clean:dist','index','less','copyCSS','scripts','watch');
 });

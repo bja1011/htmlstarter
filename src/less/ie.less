@@ -1,0 +1,125 @@
+.performance,.finansowanie {
+  background-image: url(../img/performanceScreen.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  min-height: 100%;
+  background-color: #000;
+  padding-top: 100px;
+  h1 {
+    margin-top: 0px;
+    text-shadow:1px 1px 3px #000;    
+  }
+  .subtitle,h3 {
+    text-shadow:1px 1px 3px #000;
+  }
+  p {
+    opacity: 0.8;
+    color: #fff;
+    background-color: transparent;
+  }
+  overflow: hidden;
+
+  .darkBg {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .tile {
+   /* overflow: hidden;*/
+
+    margin: 25px;
+    position: relative;    
+    transition:all 1s;
+    perspective:1200px;
+    transform-origin:center;    
+    .actionBtn {
+      padding:10px;
+      line-height:11px;
+      height:30px;
+      font-size:12px;
+    }
+    img {
+       marging: 25px;
+       transition:all 1s;
+       opacity: 1;
+       backface-visibility:hidden; 
+       transform:rotateY(0deg);
+       
+    }
+    &:hover {
+      cursor: pointer;
+
+      img {
+        /*opacity: 0.9;*/
+
+      }
+    }
+    &.active {
+      /*background: #000;*/
+      .tileDesc {
+        transform:rotateY(-180deg) translateX(-150px);
+        display: none;
+      }
+      .flipped {
+        transform:rotateY(0deg)  translateX(0px);
+        opacity: 0.9;
+        display: block;
+
+      }
+      img {
+        opacity: 0.2;
+        transform:scale(0.9);
+        transform:rotateY(-180deg);
+      }
+    }
+
+    small {
+      font-size: 10px;
+    }
+
+    .tileDesc {
+      width:100%;
+      color: #fff;
+      text-shadow:0px 0px 6px #000;
+      font-size: 18px;
+      font-family: toyota_displayregular;
+      transition:all 1s;
+      position: absolute;
+      bottom:0px;
+      left:0px;
+      padding: 50px;     
+      backface-visibility:hidden; 
+      strong {
+      font-family: toyota_displaybold;
+  }
+
+    }
+
+    .flipped {
+      display: none;
+      text-shadow:none;
+      top:0px;
+      transition:all 1s;
+      transform:rotateY(180deg) translateX(-150px);
+      backface-visibility:hidden;
+      background: #163272; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTYzMjcyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(-45deg,  #163272 0%, #000000 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#163272), color-stop(99%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #163272 0%,#000000 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #163272 0%,#000000 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #163272 0%,#000000 99%); /* IE10+ */
+background: linear-gradient(135deg,  #163272 0%,#000000 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#163272', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+
+
+    }
+
+    
+  }
+}
+
+
